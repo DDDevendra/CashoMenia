@@ -2,6 +2,7 @@ import  express  from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import Connect from "./connection.js";
+import router from "./router/routes.js";
 
 const app  = express();
 const PORT = process.env.PORT || 9000
@@ -27,3 +28,6 @@ Connect().then(()=>{
 }).catch((error)=>{
         console.log("Faild To Connect server !");
 })
+
+
+app.use('/api',router);
