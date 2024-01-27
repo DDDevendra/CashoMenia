@@ -3,6 +3,7 @@ import {  useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux';
 import {login} from '../actions/Authentication'
 
+import style from '../styles/Login.module.css'
 
 export default function Login() {
 
@@ -15,19 +16,43 @@ export default function Login() {
   console.log(auth.name);
 
   const [ok,setok] = useState('');
-
+  
   useEffect(()=>{
     setok(auth.userToken);
     dispatch(login('XYsgsgwqe124'))
   },[auth.userToken, dispatch]);
 
+  const doit = ()=>{
+    console.log(ok);
+  }
+
+
   
   return (
     <div>
-      <h1>This is Login</h1>    
-      {/* <p>{isAuthenticated}</p> 
-      <p>{userToken}</p> */}
-      <h2>this is {ok}</h2>
+        <div className={style.MainLogin}>
+          <div className={style.MainCard}>
+            <div className={style.Logo}></div>
+            <div className={style.LogoName}>
+              <p>CashoMenia</p>
+            </div>
+            <input type="text" placeholder='User Name' />
+            <input type="password" name="" id="" placeholder='Password' />
+            <button>LOGIN</button>
+            <div className={style.forgot}>
+            <p>Forgot Password ?</p>
+            </div>
+          </div>
+        
+         <div className={style.footer}>
+          <div><p>Don't Have Account ?</p></div>
+          <button onClick={doit}>SIGNUP</button>
+          </div>
+        
+        </div>
+
+
+
     </div>
   )
 }
