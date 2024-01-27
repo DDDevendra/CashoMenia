@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {  useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux';
 import {login} from '../actions/Authentication'
+import { useNavigate } from "react-router-dom";
 
 import style from '../styles/Login.module.css'
 
@@ -22,11 +23,13 @@ export default function Login() {
     dispatch(login('XYsgsgwqe124'))
   },[auth.userToken, dispatch]);
 
-  const doit = ()=>{
+
+  const nav = useNavigate();
+
+  const gotoSignup = ()=>{
     console.log(ok);
+    nav('/signup')
   }
-
-
   
   return (
     <div>
@@ -46,7 +49,7 @@ export default function Login() {
         
          <div className={style.footer}>
           <div><p>Don't Have Account ?</p></div>
-          <button onClick={doit}>SIGNUP</button>
+          <button onClick={gotoSignup}>SIGNUP</button>
           </div>
         
         </div>

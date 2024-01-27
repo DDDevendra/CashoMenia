@@ -1,0 +1,142 @@
+
+.MainSignup{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:  #C5D1F7FF;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+.MainCard{
+    background: #1638A078; /* tertiary1-700 */
+    border-radius: 2px; /* border-xs */
+    box-shadow: 1px 3px 4px hsl(225deg 42.53% 64.64%), 10px 10px 20px #9baee8;
+    width: 26rem;
+    height: 36rem;
+    margin-top:6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.Logo{
+
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background-color:  #DEE1E6FF;
+    margin-top: -4rem;
+    margin-left: -25rem;
+    background-image: url('../Assets/logo/Dslogo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+.ProfilePic{
+    width: 9rem;
+    height: 9rem;
+    border-radius: 4%;
+    background-color:  #DEE1E6FF;
+    /* margin-top: -4rem;
+    margin-left: -59rem; */
+    background-image: url('../Assets/logo/Rslogo2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0rem 1rem 0rem 40rem;
+    position: absolute;
+    /* box-shadow: 0px -1px 28px 1px #5d5b5eb0; */
+}
+
+.ProfilePic1{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 4%;
+    background-color:  #DEE1E6FF;
+    /* margin-top: -4rem;
+    margin-left: -59rem; */
+    background-image: url('../Assets/logo/Rslogo5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 4.2rem 0rem 0rem 35rem;
+    position: absolute;
+
+    /* box-shadow: 3px -3px 20px 1px #9469bfb0; */
+}
+
+
+
+.LogoName{
+    font-size: 1.8rem;
+    color: #323842FF;
+    margin-top: -5rem;
+    margin-left: -2rem;
+}
+
+.MainCard input{
+    width: 18rem;
+    height: 2.5rem;
+    border: none;
+    font-size: 1.1rem;
+    font-family: 'Aclonica';
+    color: #41454d;
+    padding-left: 0.4rem;
+    margin: 1rem 0rem;
+    border-radius: 0.2rem;
+}
+
+.MainCard button{
+    border: none;
+    width: 5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-family: aclonica;
+    margin-top: 0.4rem;
+    background-color: #385bc4ab;
+    border-radius: 0.3rem;
+}
+
+.MainCard button:hover{
+    background-color: #172f78b7;
+    
+}
+
+
+
+
+.footer{
+    background-color: #DEE1E6FF;
+    width: 31rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+    border-radius: 0.5rem;
+    color: #41454d;
+}
+
+.forgot:hover{
+    color: #383d4d;
+}
+
+.footer button{
+    border: none;
+    width: 5rem;
+    height: 2.5rem;
+    font-size: 0.8rem;
+    font-family: aclonica;
+    background-color: #7d89adab;
+    border-radius: 0.3rem; 
+}
+
+.footer button:hover{
+    background-color: #748ac6d7;
+}
