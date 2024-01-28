@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { BASE_URL } from "../helper/helper";
 
+import style from "../styles/AddItem.module.css";
 
 export default function AddItem() {
-
-
-  const [Name, setName] = useState('');
-  const [Cost, setCost] = useState(0);
-  const [Info, setInfo] = useState('');
+  const [Name, setName] = useState("");
+  const [Cost, setCost] = useState('');
+  const [Info, setInfo] = useState("");
   const [Image, setImage] = useState(null);
 
   const handleImageChange = (e) => {
@@ -16,37 +15,18 @@ export default function AddItem() {
   };
 
   const handleSubmit = async (e) => {
-
     e.preventDefault();
     e.persist();
-
     const Data = new FormData();
     Data.append("Name", Name);
     Data.append("Cost", Cost);
     Data.append("Info", Info);
     Data.append("Image", Image);
-
-
- 
-    // const data = {
-    //   Name: Name,
-    //   Cost: Cost,
-    //   Info: Info,
-    //   Image: Image,
-    // };
-    // Data.forEach((i)=>{
-    //     console.log(i);
-    // })
-
-
-    console.log(Data);
-
     try {
       const response = await fetch(`${BASE_URL}/api/additem`, {
         method: "POST",
         body: Data,
       });
-
 
       if (response.status === 200) {
         toast.success("Item Added Successfuly ");
@@ -60,8 +40,18 @@ export default function AddItem() {
 
   return (
     <div>
+      <div className={style.MainAddItem}>
+
+      <div className={style.Logo}></div>
+     
+
+      <div className={style.LogoName}>
+            <p>CashoMenia</p>
+      </div>
+
+      <div className={style.MainCard}>
       <form onSubmit={handleSubmit}>
-        <h2>this is add item page</h2>
+       
         <input
           type="text"
           placeholder="Item Name"
@@ -81,11 +71,24 @@ export default function AddItem() {
           onChange={(e) => setInfo(e.target.value)}
         />
         <input type="file" accept="image/*" onChange={handleImageChange} />
-
         <button type="submit">Add</button>
-      </form>
+      </form> 
+      <div className={style.SideCard}></div>
+      </div>
+
+      <div className={style.footer}>
+          <div>
+            <p>Buy / Sell Items </p>
+          </div>
+          <button>Market</button>
+        </div>
+      </div>
+
+      
 
       <Toaster />
     </div>
   );
 }
+
+ 

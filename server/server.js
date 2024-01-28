@@ -19,6 +19,11 @@ app.get("/", () => {
   console.log("Server is Connected !");
 });
 
+
+const projectRoot = path.resolve();
+app.use("/uploads", express.static(path.join(projectRoot, "uploads")));
+
+
 Connect()
   .then(() => {
     app.listen(PORT, async () => {

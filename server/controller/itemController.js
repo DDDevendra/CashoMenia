@@ -30,3 +30,14 @@ export async function addItem(req, res) {
     return res.status(501).send({ data: "Failed To add Item " });
   }
 }
+
+export async function giveItem(req,res){
+
+  try{
+    const Items = await Item.find();
+    return res.status(200).send({data:Items});
+  }catch(error){
+    return res.status(500).send({data:"Failed To Load Data"});
+  }
+}
+

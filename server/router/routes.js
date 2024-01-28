@@ -33,5 +33,7 @@ router.route("/signUp").post(userController.SingUp);
 router.route("/login").put(userController.Login);
 
 router.route("/addItem").post(itemUpload.single("Image"), ItemController.addItem);
+router.route('/getItems').get(ItemController.giveItem);
+
 
 export default router;
