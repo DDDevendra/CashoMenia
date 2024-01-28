@@ -20,6 +20,7 @@ export async function SingUp(req,res){
     try{
 
         const data = req.body;
+
         if(!data){
             return res.status(500).send({data:'Failed to Load data'});
         }
@@ -42,7 +43,11 @@ export async function SingUp(req,res){
         })
 
         await newUser.save().then(()=>{
-            return res.status(201).send({data:"SignUp Successfuly "});
+
+            const token = jwt.sign({userEmail:data.userEmail},'secret123');
+            return res.status(201).send({ data:token });
+            // return res.status(201).send({data:"SignUp Successfuly "});
+
         }).catch((error)=>{
             return res.status(501).send({data:"Failed To SingUp"});
         })
@@ -77,16 +82,13 @@ export async function Login(req,res){
                 if(isMatch){
 
                     const token = jwt.sign({userEmail:a.userEmail},'secret123');
-                    return res.status(201).send({ data:token });
+                    return res.status(201).send({ data:token })
 
                 }else{
                     return res.status(500).send({data:"Wrong Password"});
                 }
 
             })
-
-            
-
 
     }catch(error){
         return res.send(501).send({data:"Failed To Login "});

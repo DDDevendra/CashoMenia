@@ -12,8 +12,8 @@ const userState = {
         return {
           ...state,
           isAuthenticated: true,
-          userToken: action.payload,
-          name:'dev'
+          userToken: action.payload.userToken,
+          name:action.payload.userName
         
         };
       case 'LOGOUT':
