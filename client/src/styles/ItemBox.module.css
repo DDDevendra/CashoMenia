@@ -1,0 +1,88 @@
+
+
+.ItemBox{
+    width: 10rem;
+    height: 11rem;
+    background-color: #ffffffd9;
+    border-radius: 0.45rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+
+.ItemImg{
+
+    width: 9rem;
+    height: 7rem;
+    background-color: #eaeaead9;  
+    border-radius: 0.2rem;
+
+    background-image: url('../Assets/logo/Rslogo3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.ButBox{
+
+    width: 9rem;
+    height: 3rem;
+    background-color: #c8c8c8d9;  
+    border-radius: 0.2rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+
+
+.ButBox div{
+    height: 2.4rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.CostBut{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5.5rem;
+    background-color: #e4e4e438;
+}
+
+
+.CostBut:hover{
+    background-color: #e4e4e4;
+
+}
+
+
+.BuyBut:hover{
+    background-color: #7adc66ea;;
+}
+
+
+.BuyBut{
+    width: 2.6rem;
+    background-image: url('../Assets/logo/add-item.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 87%;
+    background-color: #baef8bcb; 
+}
+
+
+ 
+ 

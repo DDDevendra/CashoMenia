@@ -1,0 +1,19 @@
+
+.MainNavBar{
+    position: absolute;
+    width: 100%;
+    height: 3.5rem;
+    background-color: #1638A078;
+}
+
+.Logo{
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background-color:  #DEE1E6FF;
+    margin-top: -4rem;
+    background-image: url('../Assets/logo/Dslogo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 1% 0% 0% 47%;
+}
