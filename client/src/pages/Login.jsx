@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+
+import { useDispatch, useSelector } from "react-redux";
 import { login } from "../actions/Authentication";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
@@ -9,11 +10,13 @@ import { BASE_URL } from "../helper/helper";
 import style from "../styles/Login.module.css";
 
 export default function Login() {
+
+
   const dispatch = useDispatch();
 
   // const {  isAuthenticated, userToken } = useSelector(state => state.auth);
   // console.log(isAuthenticated,userToken);
-
+ 
  
   // console.log(auth.name);
 
@@ -43,7 +46,7 @@ export default function Login() {
           }
 
         const response = await fetch(`${BASE_URL}/api/login`,{
-          method:'PUT',
+          method:'PATCH',
           headers:{
             "Content-Type": "application/json",
           },
@@ -61,10 +64,16 @@ export default function Login() {
             userName:userName
 
           }
-          await dispatch(login(x))
 
+          sessionStorage.setItem('userToken',res.data);
+
+          
+          await dispatch(login(x))
+  
+         
+           
           setTimeout(() => {
-            nav('/home')
+            nav('/market')
           },  2000);
 
         }else{

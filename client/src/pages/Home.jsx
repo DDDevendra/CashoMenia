@@ -53,7 +53,7 @@ export default function Home() {
   
 
   setTimeout(() => {
-    // setok(auth.usertoken);
+    setok(auth.usertoken);
     console.log(auth);   
   }, 1000);
   
@@ -62,18 +62,18 @@ export default function Home() {
 
     <div>
     <h1>{ok}</h1>
-    <p>
+    {/* <p>
       {Items.map((item, index) => (
         <div key={index}>
         
           <p>{`${BASE_URL}/${item.Image.replace(/\\/g, "/")}`}</p>
-          <img src={`${BASE_URL}/${item.Image.replace(/\\/g, "/")}`}alt={item.Name} />
+          <img src={`${BASE_URL}/${item.Image.replace(/\\/g, "/")}`} alt={item.Name} />
       
         </div> 
         
           ))}
 
-    </p>
+    </p> */}
    
     <Toaster/>
     </div>

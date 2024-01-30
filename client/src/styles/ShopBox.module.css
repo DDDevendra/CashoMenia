@@ -1,0 +1,64 @@
+.ShopBoxMain{
+    background-color: white;
+    width: 11rem;
+   
+    display: flex;
+    border-radius: 0.44rem;
+    
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    margin: 0.5rem 0rem 0.5rem 0rem;
+}
+
+.ShopBoxMain:hover{
+    transform: scale(1.08);
+    transition: 500ms ease-in-out;
+}
+
+.ButLeft{
+    background-color: rgb(255, 205, 23);
+    width: 2rem;
+    height: 6rem;
+    border-radius: 0.2rem;
+
+    background-image: url('../Assets/logo/load1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:1.4rem;
+}
+
+.ButLeft:hover{
+    background-color: rgb(193, 151, 1);
+}
+
+
+.Image{
+    /* position:fixed; */
+   
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.2rem;
+    background-image: url('../Assets/logo/shop1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.ButRight{
+    background-color: #EC407A;
+    width: 2rem;
+    height: 6rem;
+    border-radius: 0.2rem;
+
+    background-image: url('../Assets/logo/remove.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:1.4rem;
+}
+
+.ButRight:hover{
+    background-color: #da0049;
+}
+

@@ -3,7 +3,7 @@
 .ItemBox{
     width: 10rem;
     height: 11rem;
-    background-color: #ffffffd9;
+    background-color: #78909C;
     border-radius: 0.45rem;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@
 
     width: 9rem;
     height: 3rem;
-    background-color: #c8c8c8d9;  
+    background-color: #ff5e2c;  
     border-radius: 0.2rem;
 
     display: flex;
@@ -60,6 +60,10 @@
     justify-content: center;
     width: 5.5rem;
     background-color: #e4e4e438;
+
+    font-size: 0.8rem;
+    font-weight: lighter;
+    color: #2d2949;
 }
 
 
@@ -70,7 +74,7 @@
 
 
 .BuyBut:hover{
-    background-color: #7adc66ea;;
+    background-color: #368226;;
 }
 
 
@@ -79,8 +83,8 @@
     background-image: url('../Assets/logo/add-item.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 87%;
-    background-color: #baef8bcb; 
+    background-size: 81%;
+    background-color: #c62828; 
 }
 
 

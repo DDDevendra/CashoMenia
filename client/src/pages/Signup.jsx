@@ -64,7 +64,9 @@ export default function Signup() {
             userToken: res.data,
             userName: userName,
           };
-          await dispatch(login(x));
+
+            sessionStorage.setItem('userToken',res.data);
+           dispatch(login(x));
 
           setTimeout(() => {
             nav("/home");

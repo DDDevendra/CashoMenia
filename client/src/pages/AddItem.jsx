@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { BASE_URL } from "../helper/helper";
+import { useNavigate } from "react-router-dom";
 
 import style from "../styles/AddItem.module.css";
 
@@ -30,6 +31,10 @@ export default function AddItem() {
 
       if (response.status === 200) {
         toast.success("Item Added Successfuly ");
+        setCost('');
+        setImage(null);
+        setInfo('');
+        setName('');
       } else {
         toast.error(" Failed To Add Item ");
       }
@@ -37,6 +42,10 @@ export default function AddItem() {
       toast.error("Failed To add Item");
     }
   };
+
+  const nav=useNavigate();
+
+
 
   return (
     <div>
@@ -80,7 +89,9 @@ export default function AddItem() {
           <div>
             <p>Buy / Sell Items </p>
           </div>
-          <button>Market</button>
+          <button onClick={()=>{
+            nav('/Market');
+          }}>Market</button>
         </div>
       </div>
 

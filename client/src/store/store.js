@@ -1,11 +1,15 @@
-// store.js
-
 import { configureStore } from '@reduxjs/toolkit';
-import index from '../reducers/index';
+import { persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
+import rootReducer from '../reducers/index';
 
-const store = configureStore({
-  reducer: index,
-  // Add other configurations if needed
+const persistConfig = {
+ key: 'root',
+ storage,
+};
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+export default configureStore({
+ reducer: persistedReducer,
 });
-
-export default store;

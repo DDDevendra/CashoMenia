@@ -82,7 +82,7 @@ export async function Login(req,res){
                 if(isMatch){
 
                     const token = jwt.sign({userEmail:a.userEmail},'secret123');
-                    return res.status(201).send({ data:token })
+                    return res.status(201).send({ data:token });
 
                 }else{
                     return res.status(500).send({data:"Wrong Password"});
@@ -93,4 +93,32 @@ export async function Login(req,res){
     }catch(error){
         return res.send(501).send({data:"Failed To Login "});
     }
+}
+
+export async function GiveUserData(req,res){
+
+
+    try{
+        const token = req.headers["x-access-token"];
+        const decode = await jwt.verify(token, "secret123");
+        const Email = decode.userEmail;
+
+        const user = await User.findOne({userEmail:Email});
+        
+        if(!user)
+        {
+            return  res.status(500).send({data:"User Not found"});
+        }
+        else{
+            
+            return res.status(201).send({data:user});
+        }
+
+    }catch(error){
+        return res.status(500).send({data:"Failed To Load Data"})
+    }
+   
+
+
+
 }
